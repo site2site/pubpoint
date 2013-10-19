@@ -28,6 +28,7 @@ var tumblr_defaults = {
 
 console.dir(config);
 sb = new Spacebrew.Client( config.server, config.name, config.description );  // create spacebrew client object
+console.dir(sb);
 
 sb.addSubscribe("url", "string", ""); 
 sb.onStringMessage = onStringMessage;
