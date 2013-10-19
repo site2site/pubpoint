@@ -30,9 +30,11 @@ console.dir(config);
 sb = new Spacebrew.Client( config.server, config.name, config.description );  // create spacebrew client object
 console.dir(sb);
 
+sb.onOpen = onOpen;
+/*
 sb.addSubscribe("url", "string", ""); 
 sb.onStringMessage = onStringMessage;
-sb.onOpen = onOpen;
+
 
 function onStringMessage( name, value ){
       if(name == "url"){
@@ -45,7 +47,7 @@ function onStringMessage( name, value ){
       }
 }
 
-
+*/
 function onOpen(){
   console.log( "Connected through Spacebrew as: " + sb.name() + "." );
 }
