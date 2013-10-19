@@ -1,0 +1,6 @@
+{
+  "name": "pubpoint",
+  "description": "A Site to Site module that takes a web accessible file and publishes it to the site to site tumblr",
+  "server": "server.sitetosite.co",
+  "location": "Studio-X NYC"
+}

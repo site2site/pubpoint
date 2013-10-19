@@ -1,0 +1,15 @@
+{
+    "name": "pubpoint",
+    "description": "A Site to Site module that takes a web accessible file and publishes it to the site to site tumblr",
+    "version": "0.0.1",
+    "author": {
+        "name": "Travis Donia <tdonia@gmail.com>",
+        "email": "tdonia@gmail.com"
+    },
+    "dependencies": {
+        "tumblr": "*"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    }
+}
