@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+console.log('Welcome to pubpoint - for publishing post it notes to tumblr.');
+
+
 var Spacebrew = require('./sb-1.3.0').Spacebrew,
     sb,
     config = require("./machine"),
@@ -25,12 +28,10 @@ var tumblr_defaults = {
 sb = new Spacebrew.Client( config.server, config.name, config.description );  // create spacebrew client object
 
 sb.addSubscribe("url", "string", ""); 
-sb.onCustomMessage = onCustomMessage;
+sb.onStringMessage = onStringMessage;
 sb.onOpen = onOpen;
 
-function onCustomMessage( name, value, type ){
-  switch(type){
-    case "string":
+function onStringMessage( name, value ){
       if(name == "url"){
         console.log('file url received: '+value);
         // tumblr_client.photo("pubpoint.tumblr.com", tumblr_defaults, function(err, json){
@@ -38,7 +39,6 @@ function onCustomMessage( name, value, type ){
         //   console.log(json);
         // });
       }
-  }
 }
 
 
