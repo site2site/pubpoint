@@ -34,10 +34,11 @@ sb.onOpen = onOpen;
 function onStringMessage( name, value ){
       if(name == "url"){
         console.log('file url received: '+value);
-        // tumblr_client.photo("pubpoint.tumblr.com", tumblr_defaults, function(err, json){
-        //   console.log(err);
-        //   console.log(json);
-        // });
+        tumblr_defaults["source"] = value;
+        tumblr_client.photo("pubpoint.tumblr.com", tumblr_defaults, function(err, json){
+          console.log(err);
+          console.log(json);
+        });
       }
 }
 
