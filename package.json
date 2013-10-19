@@ -7,6 +7,7 @@
         "email": "tdonia@gmail.com"
     },
     "dependencies": {
+        "ws": "*",
         "tumblr": "*"
     },
     "engines": {
